@@ -1,0 +1,14 @@
+#Background Colors
+{
+    html : #0F0E0E;
+}
+
+#Text Colors
+{
+    #F5EDED
+} 
+
+
+#Button Colors {
+    #FFB835
+}
