@@ -27,22 +27,26 @@ const Navigation = () => {
           </li>
           <li>
             <NavLink to="/studio-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
-                Studio
+                Studios
             </NavLink>
 
           </li>
           <li>
-            <NavLink to="/wallpaper-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
-                Wallpaper
-            </NavLink>
-
-          </li>
-          <li>
-            <NavLink to="/tattp-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
+            <NavLink to="/tatto-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
                 Tatto
             </NavLink>
 
           </li>
+
+          <li>
+            <NavLink to="/login-page">
+              <span className={classes.login}>
+                Login
+              </span>
+            </NavLink>
+
+          </li>
+
         </ul>
       </div>
     </header>

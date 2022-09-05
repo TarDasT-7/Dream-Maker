@@ -6,7 +6,6 @@ import ClouthPage from "../pages/clouth/ClouthPage";
 import MusicPage from "../pages/music/MusicPage";
 import StudioPage from "../pages/studio/StudioPage";
 import TattoPage from "../pages/tatto/TattoPage";
-import WallpaperPage from "../pages/wallpaper/WallpaperPage";
 
 import Navigation from "../components/header/Navigation";
 import Footer from "../components/footer/Footer";
@@ -22,8 +21,8 @@ const WebRouter = () =>{
                 <Route path="music-page" element={<MusicPage />} />
                 <Route path="clouth-page" element={<ClouthPage />} />
                 <Route path="studio-page" element={<StudioPage />} />
-                <Route path="wallpaper-page" element={<WallpaperPage />} />
-                <Route path="tattp-page" element={<TattoPage />} />
+                <Route path="tatto-page" element={<TattoPage />} />
+                <Route path="/login-page" element={<TattoPage />} />
             </Routes>
 
             <Routes>

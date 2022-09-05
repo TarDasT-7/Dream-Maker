@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import classes from './Card-item.module.scss';
 
 const CardItem = (props) => {
-    console.log(props.lock);
     return (
         <Link to={props.address}>
             <div  className={classes.cardItem} >
