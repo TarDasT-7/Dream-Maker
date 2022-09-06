@@ -1,8 +1,8 @@
 .footer {
-    background-color: #ffb835;
-    opacity: .2;
+    background-color: #F5EDED;
+    opacity: 0.4;
     width: 100%;
-    height: 25px;
+    height: 40px;
     position: fixed;
     bottom: 0;
     transition: .5s ease-out;
@@ -12,25 +12,27 @@
     opacity: 1;
 }
 
-.creator{
+.musicPlayer{
     float: left;
-    width: 15%;
-    margin: 5px 0;
-    text-align: center;
-    a{
+    width: 70%;
+    height: 100%;
+    text-align: left;
+    font-family: myFourthFont;
+    
+    p{
         color: #0F0E0E;
-        text-decoration: none;
-        transition: all .5s ease-out;
+        margin: 0 10px;
+        display: inline-block;
+        position: relative;
+        bottom: 8px;
+        font-size: 18px;
     }
 
-    a:hover{
-        opacity: .95;
-    }
 }
 
 .menu{
     float: right;
-    width: 85%;
+    width: 15%;
 
     ul{
         margin: 2px 50px 0 0px;
