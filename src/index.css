@@ -1,3 +1,21 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(../src/assets/fonts/Caveat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: mySecondFont;
+  src: url(../src/assets/fonts/Kalam-Regular.ttf);
+}
+@font-face {
+  font-family: myThirdFont;
+  src: url(../src/assets/fonts/ConcertOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: myFourthFont;
+  src: url(../src/assets/fonts/NewsCycle-Regular.ttf);
+}
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -5,8 +23,10 @@
 }
 
 html {
+  /* font-family: 'Lucida Sans Regular'; */
   font-family: sans-serif;
   background-color: #0F0E0E;
+
 }
 
 body {
@@ -15,7 +35,6 @@ direction: ltr;
 
 .active-link{
   opacity: .95;
-  border-bottom: 1px solid #0F0E0E;
-  font-style: italic;
+  background-color: #0F0E0E;
+  color: #F5EDED!important;
 }
-

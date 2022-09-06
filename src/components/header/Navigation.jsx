@@ -26,7 +26,7 @@ const Navigation = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/studio-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
+            <NavLink to="/studio-page" className={(navData) => (navData.isActive ? "active-link" : "")} >
                 Studios
             </NavLink>
 
@@ -40,7 +40,7 @@ const Navigation = () => {
 
           <li>
             <NavLink to="/login-page">
-              <span className={classes.login}>
+              <span>
                 Login
               </span>
             </NavLink>

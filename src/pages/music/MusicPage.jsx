@@ -1,6 +1,6 @@
 import classes from "./MusicPage.module.scss";
 
-import SongImage from "../../assets/media/images/homePageWallpaper/back.jpg";
+import SongImage from "../../assets/media/images/musicPage/songs.jpg";
 import ArtistsImage from "../../assets/media/images/musicPage/artist.jpg";
 import PlaylistImage from "../../assets/media/images/musicPage/playlist.jpg";
 
@@ -13,7 +13,7 @@ const MusicPage = () => {
         id:1,
         title: "Songs",
         description: "top hip hop music for play or download...",
-        image: 'https://www.rollingstone.com/wp-content/uploads/2018/06/rs-146432-6b725a8c7cad1a0414c5a33f06299e9d2730ae2e.jpg',
+        image: SongImage,
         address: "songs",
         lock : false
     },
