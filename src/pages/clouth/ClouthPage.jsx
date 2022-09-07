@@ -16,7 +16,7 @@ const coutePageItems = [
     title: "T-Shirts",
     description: "top hip-hop t-shirt for man and woman",
     image: tShirt,
-    address: "tshirts",
+    href: "tshirts",
     lock: false,
   },
   {
@@ -24,7 +24,7 @@ const coutePageItems = [
     title: "Pants",
     description: "top hip-hop pants for man and woman",
     image: pants,
-    address: "pants",
+    href: "pants",
     lock: false,
   },
   {
@@ -32,7 +32,7 @@ const coutePageItems = [
     title: "Cap",
     description: "cap",
     image: cap,
-    address: "caps",
+    href: "caps",
     lock: false,
   },
   {
@@ -40,7 +40,7 @@ const coutePageItems = [
     title: "Accessories",
     description: "accessories",
     image: accessorie,
-    address: "accessories",
+    href: "accessories",
     lock: false,
   },
   {
@@ -48,7 +48,7 @@ const coutePageItems = [
     title: "Shoes",
     description: "hip hop shoes",
     image: shoes,
-    address: "shoes",
+    href: "shoes",
     lock: false,
   },
   {
@@ -56,7 +56,7 @@ const coutePageItems = [
     title: "Cart",
     description: "your cart",
     image: cart,
-    address: "playlist",
+    href: "playlist",
     lock: true,
   },
 ];

@@ -11,7 +11,7 @@ const musicPageItems = [
       title: "Songs",
       description: "top hip hop music for play or download...",
       image: "musicPage/songs.jpg",
-      address: "songs",
+      href: "songs",
       lock : false
   },
   {
@@ -19,7 +19,7 @@ const musicPageItems = [
       title: "Artists",
       description: "best hip hop singer",
       image: "musicPage/artist.jpg",
-      address: "artists",
+      href: "artists",
       lock : false
   },
   {
@@ -27,7 +27,7 @@ const musicPageItems = [
       title: "Play List",
       description: "your play list",
       image: "musicPage/playlist.jpg",
-      address: "playlist",
+      href: "playlist",
       lock : true
     },
 ];

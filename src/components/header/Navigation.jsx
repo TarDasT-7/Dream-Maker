@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import classes from "./Navigation.module.scss";
 
+
 const Navigation = () => {
   return (
     <header className={classes.header}>
@@ -16,12 +17,12 @@ const Navigation = () => {
       <div className={classes.menu}>
         <ul>
           <li>
-            <NavLink to="/music-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
+            <NavLink to="music-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
               Music
             </NavLink>
           </li>
           <li>
-            <NavLink to="/clouth-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
+            <NavLink to="clouth-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
                 Clouth
             </NavLink>
           </li>

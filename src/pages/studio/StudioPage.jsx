@@ -13,7 +13,7 @@ const studioPageItems = [
     title: "Dream Maker Club",
     description: "Beat, Recording, cover, mix & master and...",
     image: beatImage,
-    address: "1",
+    href: "1",
     lock: false,
   },
   {
@@ -21,7 +21,7 @@ const studioPageItems = [
     title: "Dark Studio",
     description: "Recording, mix & master",
     image: recordImage,
-    address: "2",
+    href: "2",
     lock: false,
   },
 

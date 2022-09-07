@@ -9,6 +9,7 @@ import TattoPage from "../pages/tatto/TattoPage";
 
 import Song from "../pages/music/song/Song";
 import Artist from "../pages/music/artist/Artist";
+import ArtistShow from "../pages/music/artist/ArtistShow";
 import Playlist from "../pages/music/playlist/Playlist";
 
 
@@ -26,7 +27,10 @@ const WebRouter = () =>{
                 <Route path="music-page" element={<MusicPage />} />
 
                 <Route path="music-page/songs" element={<Song />} />
+                
                 <Route path="music-page/artists" element={<Artist />} />
+                <Route path="music-page/artists/:artistId" element={<ArtistShow />} />
+
                 <Route path="music-page/playlist" element={<Playlist />} />
 
 

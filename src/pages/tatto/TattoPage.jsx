@@ -9,7 +9,7 @@ const tattoPageItems = [
     title: "Title",
     description: "some text ... for test",
     image: 'https://idea4tattoo.com/orig/0/80/802/8024/idea4tattoo.com_floral-tattoos-tattoo-ideas-dark-tattoos-802445.jpg',
-    address: "tshirts",
+    href: "tshirts",
     lock: false,
   },
   {
@@ -17,7 +17,7 @@ const tattoPageItems = [
     title: "Title",
     description: "some text ... for test",
     image: 'https://64.media.tumblr.com/6ddede76ab2b3aacb4ce6634159b67c9/tumblr_ol5orh6Xad1su7hvmo1_1280.jpg',
-    address: "pants",
+    href: "pants",
     lock: false,
   },
   {
@@ -25,7 +25,7 @@ const tattoPageItems = [
     title: "Title",
     description: "some text ... for test",
     image: 'https://tattoosboygirl.com/wp-content/uploads/2019/01/two-face-snake-tattoos-on-arm.jpg',
-    address: "caps",
+    href: "caps",
     lock: false,
   },
   {
@@ -33,7 +33,7 @@ const tattoPageItems = [
     title: "Title",
     description: "some text ... for test",
     image: 'https://preview.redd.it/vqlu3v3aa1e71.jpg?width=640&crop=smart&auto=webp&s=9631208c173421a16ceac76fb2c1b360d4d2586e',
-    address: "accessories",
+    href: "accessories",
     lock: false,
   },
   {
@@ -41,7 +41,7 @@ const tattoPageItems = [
     title: "Title",
     description: "some text ... for test",
     image: 'https://i.pinimg.com/originals/0f/f8/a8/0ff8a8517546f224dab53eb837d5df0c.jpg',
-    address: "shoes",
+    href: "shoes",
     lock: false,
   },
   {
@@ -49,7 +49,7 @@ const tattoPageItems = [
     title: "Title",
     description: "some text ... for test",
     image: 'https://i.pinimg.com/736x/b1/03/e5/b103e5fa9eaf4a0eaba2c19a796d7b62.jpg',
-    address: "playlist",
+    href: "playlist",
     lock: false,
   },
 ];

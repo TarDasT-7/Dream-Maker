@@ -6,7 +6,10 @@ import { useSelector } from "react-redux";
 
 import classes from "./SongCard-item.module.scss";
 
+
+
 const SongCardItem = (props) => {
+  const artistHref = '/music-page/artists/';
   const playIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +100,7 @@ const SongCardItem = (props) => {
               artist.isArtist ? (
                   <span key={index}>
                     {" "}
-                    <Link to="artists" style={{ color: "#0F0E0E" }}>
+                    <Link to={artistHref + artist.id} style={{ color: "#0F0E0E" }}>
                       {" "}
                       @{artist.name}{" "}
                     </Link>{" "}
