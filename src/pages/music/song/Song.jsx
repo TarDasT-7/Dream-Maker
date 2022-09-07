@@ -39,15 +39,14 @@ const Song = (props) => {
       setSongItems(trackSorteed);
     }
   };
-  console.log(newSongsItems);
   return (
     <>
       <FilterSong onFiltering={filteringHanler} prevFilter={filterParamets} />
       {newSongsItems.map((item) => {
         return (
-          <div className={classes.songsPageBox}>
-            <SongCard>
-              <SongCardItem key={item.id} {...item} />
+          <div key={item.id}  className={classes.songsPageBox}>
+            <SongCard >
+              <SongCardItem {...item} />
             </SongCard>
           </div>
         );
@@ -56,7 +55,7 @@ const Song = (props) => {
       {newSongsItems.length == 0 && (
         <div className={classes.songsPageBox}>
           <SongCard>
-            <SongCardItem key="notFound404"  />
+            <SongCardItem />
           </SongCard>
         </div>
       )}

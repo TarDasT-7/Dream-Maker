@@ -4,8 +4,10 @@ import classes from './Card-item.module.scss';
 
 const CardItem = (props) => {
 
-    const img = process.env.PUBLIC_URL + `/images/${props.image}`;
+    const parentComponent = props.parentComponent === undefined ? false : props.parentComponent ;
 
+    const img = process.env.PUBLIC_URL + `/images/${props.image}`;
+  
     return (
         <Link to={props.address}>
 
@@ -14,10 +16,29 @@ const CardItem = (props) => {
                 <div className={`${classes.cardItemImage} ${props.lock ? classes.lockCard : classes.cardItemImageHover}`}
                      style={{ backgroundImage: `url(${img})`}}></div>
 
-                <div className={classes.cardItemDescription}>
-                    <h1>{props.title} {props.lock &&  <span className={classes.lockLogIn}>( pleases <Link to="/">login</Link> )</span> }</h1>
-                    <p>{props.description}</p>
-                </div>
+                {parentComponent && parentComponent === 'artist' &&
+                    <>
+                        <div className={`${classes.cardReadDescription}`}>
+                            <span>
+                                <h1>{props.title}</h1>
+                                <p>{props.description}</p>
+                            </span>
+                        </div>
+
+                        <div className={classes.cardItemDescriptionSecond}>
+                            <h1>{props.title}</h1>
+                        </div>
+                    </>
+                }
+
+                {parentComponent && parentComponent !== 'artist' &&
+                    <div className={classes.cardItemDescription}>
+                        <h1>{props.title} {props.lock &&  <span className={classes.lockLogIn}>( pleases Login  )</span> }</h1>
+                        <p>{props.description}</p>
+                    </div>
+                }
+
+
             </div>
         </Link>
     );

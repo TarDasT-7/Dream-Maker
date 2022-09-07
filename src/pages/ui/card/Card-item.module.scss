@@ -17,6 +17,33 @@
         transition: 1s ease-out;
     }
 
+    .cardReadDescription{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0F0E0E;
+        transition: .4s ease-out;
+        opacity: 0;
+        text-align: center;
+
+        span{
+            position: relative;
+            top: 40%;
+            // left: 50%;
+            // margin: 0 auto;
+            color: #F5EDED;
+        }
+
+
+        h1{
+            font-size: 32px;
+        }
+        p{
+            font-size: 22px;
+        }
+    }
+
     .cardItemDescription{
         width: 100%;
         min-height: 12%;
@@ -27,8 +54,6 @@
         background-color: #F5EDED;
         transition: .4s ease-out;
         overflow: auto;
-        // text-align: center;
-
 
         h1{
             margin: 0 0 0 10px;
@@ -40,8 +65,28 @@
         }
     }
 
+    .cardItemDescriptionSecond{
+        width: 100%;
+        height: 8%;
+        position: absolute;
+        bottom: 20px;
+        opacity: .75;
+        background-color: #F5EDED;
+        transition: .5s ease-out;
+        overflow: auto;
+
+        h1{
+            margin: 0 0 0 10px;
+            font-size: 26px;
+        }
+    }
+
     &:hover > .cardItemDescription{
         opacity: 9;
+    }
+
+    &:hover > .cardItemDescriptionSecond{
+        opacity: 0;
     }
     &:hover > .cardItemImageHover{
         opacity: .8;
@@ -51,6 +96,10 @@
         transform: scale(1.1) rotateZ(3deg);
     }
 
+    &:hover > .cardReadDescription{
+        opacity: .9;
+
+    }
     
 }
 .lockCard{

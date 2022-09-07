@@ -3,6 +3,7 @@ import classes from "./MusicPage.module.scss";
 
 import Card from "../ui/card/Card";
 import CardItem from "../ui/card/Card-item";
+import { Fragment } from "react";
 
 const musicPageItems = [
   {
@@ -33,17 +34,17 @@ const musicPageItems = [
 const MusicPage = () => {
 
   return (
-    <>
+    <Fragment>
       {musicPageItems.map((item) => {
         return (
-          <div className={classes.musicPageBox}>
+          <div key={item.id} className={classes.musicPageBox}>
             <Card>
-              <CardItem key={item.id} {...item}/>
+              <CardItem {...item}/>
             </Card>
           </div>
         );
       })}
-    </>
+    </Fragment>
   );
 };
 export default MusicPage;

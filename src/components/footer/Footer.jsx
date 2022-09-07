@@ -29,7 +29,6 @@ const Footer = () => {
             {" "}
             {music.artists.map((artist, index) => {
               if (music.artists.length > 1 && appendAnd > 1) {
-                console.log(appendAnd);
                 appendAnd--;
                 return artist.name + " & ";
               } else {

@@ -5,16 +5,16 @@ import classes from "./Artist.module.scss";
 
 import { ArtistsData } from "../../../components/data/atristsData";
 
-// console.log(require('../../../assets/media/images/artists/eminem.jpg'));
 
-const Artist = () => {
+const Artist = (props) => {
+
   return (
     <>
       {ArtistsData.map((item) => {
         return (
           <div className={classes.artistsPageBox}>
             <Card>
-              <CardItem key={item.id} {...item} />
+              <CardItem parentComponent="artist" key={item.id} {...item} />
             </Card>
           </div>
         );
