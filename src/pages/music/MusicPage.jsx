@@ -1,8 +1,5 @@
 import classes from "./MusicPage.module.scss";
 
-import SongImage from "../../assets/media/images/musicPage/songs.jpg";
-import ArtistsImage from "../../assets/media/images/musicPage/artist.jpg";
-import PlaylistImage from "../../assets/media/images/musicPage/playlist.jpg";
 
 import Card from "../ui/card/Card";
 import CardItem from "../ui/card/Card-item";
@@ -12,7 +9,7 @@ const musicPageItems = [
       id:1,
       title: "Songs",
       description: "top hip hop music for play or download...",
-      image: SongImage,
+      image: "musicPage/songs.jpg",
       address: "songs",
       lock : false
   },
@@ -20,7 +17,7 @@ const musicPageItems = [
       id:2,
       title: "Artists",
       description: "best hip hop singer",
-      image: ArtistsImage,
+      image: "musicPage/artist.jpg",
       address: "artists",
       lock : false
   },
@@ -28,7 +25,7 @@ const musicPageItems = [
       id:3,
       title: "Play List",
       description: "your play list",
-      image: PlaylistImage,
+      image: "musicPage/playlist.jpg",
       address: "playlist",
       lock : true
     },

@@ -39,47 +39,77 @@ const SongCardItem = (props) => {
   const musicPlayerController = () => {
     dispatch(MusicPlayerActions.playOrPauseToggle(props.id));
   };
+  
+  const findItem = props.id === undefined ? false : true;
+  const image = props.id === undefined ?
+  process.env.PUBLIC_URL + `/images/errors/404.jpg` :
+  props.image;
 
+
+  console.log(props.id === undefined);
   return (
-    // <Link to={props.address}>
+    
     <div className={classes.cardItem}>
-      <div
-        className={`${classes.cardItemImage} ${
-          props.lock ? classes.lockCard : classes.cardItemImageHover
-        }`}
-        style={{ backgroundImage: `url(${props.image})` }}
-      ></div>
-      <div className={`${classes.cardItemPlay}`}>
-        <span onClick={musicPlayerController}>
-          {musicId === props.id && playingMusic ? pauseIcon : playIcon}
-        </span>
-      </div>
 
-      <div className={classes.cardItemDescription}>
-        <h1>
-          {props.title}{" "}
-          {props.lock && (
-            <span className={classes.lockLogIn}>
-              ( pleases <Link to="/">login</Link> )
+      {!findItem &&
+        <>
+
+          <div
+            className={`${classes.cardItemImage}`}
+            style={{ backgroundImage: `url(${image})` }}
+
+          ></div>
+
+          <div className={classes.cardItemDescription}>
+          
+          <h1>
+            No artist with this name was found...
+          </h1>
+
+          </div>
+        </>
+      }
+
+      {findItem && 
+        <>
+          <div
+            className={`${classes.cardItemImage} ${
+              props.lock ? classes.lockCard : classes.cardItemImageHover
+            }`}
+            style={{ backgroundImage: `url(${props.image})` }}
+            ></div>
+          <div className={`${classes.cardItemPlay}`}>
+            <span onClick={musicPlayerController}>
+              {musicId === props.id && playingMusic ? pauseIcon : playIcon}
             </span>
-          )}
-        </h1>
-        {props.artists.map((artist) =>
-          artist.isArtist ? (
-            <span>
-              {" "}
-              <Link to="artists" style={{ color: "#0F0E0E" }}>
-                {" "}
-                @{artist.name}{" "}
-              </Link>{" "}
-            </span>
-          ) : (
-            <span>#{artist.name}</span>
-          )
-        )}
-      </div>
+          </div>
+
+          <div className={classes.cardItemDescription}>
+            <h1>
+              {props.title}{" "}
+              {props.lock && (
+                <span className={classes.lockLogIn}>
+                  ( pleases <Link to="/">login</Link> )
+                </span>
+              )}
+            </h1>
+            {props.artists.map((artist) =>
+              artist.isArtist ? (
+                <span>
+                  {" "}
+                  <Link to="artists" style={{ color: "#0F0E0E" }}>
+                    {" "}
+                    @{artist.name}{" "}
+                  </Link>{" "}
+                </span>
+              ) : (
+                <span>#{artist.name}</span>
+                )
+                )}
+          </div>
+        </>
+      }
     </div>
-    // </Link>
   );
 };
 
