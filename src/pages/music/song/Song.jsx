@@ -41,11 +41,17 @@ const Song = (props) => {
   };
   return (
     <>
-      <FilterSong onFiltering={filteringHanler} prevFilter={filterParamets} counter={newSongsItems.length}/>
+      <FilterSong
+        onFiltering={filteringHanler}
+        prevFilter={filterParamets}
+        counter={newSongsItems.length}
+        placeholder="Artist Name..."
+        WhatShouldILookFor="ArtistsPlease"
+      />
       {newSongsItems.map((item) => {
         return (
-          <div key={item.id}  className={classes.songsPageBox}>
-            <SongCard >
+          <div key={item.id} className={classes.songsPageBox}>
+            <SongCard>
               <SongCardItem {...item} />
             </SongCard>
           </div>

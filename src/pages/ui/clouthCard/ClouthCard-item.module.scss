@@ -1,0 +1,144 @@
+.cardItem{
+    font-family: myFourthFont;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    color: #0F0E0E;
+
+    .cardItemImage{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        transition: 1s ease-out;
+    }
+
+    .cardReadDescription{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0F0E0E;
+        transition: .4s ease-out;
+        opacity: 0;
+        text-align: center;
+
+        span{
+            position: relative;
+            top: 5%;
+            // left: 50%;
+            // margin: 0 auto;
+            color: #F5EDED;
+        }
+
+
+        h1{
+            font-size: 32px;
+        }
+        p{
+            font-size: 22px;
+        }
+    }
+
+    .cardItemDescription{
+        width: 100%;
+        min-height: 12%;
+        max-height: 15%;
+        position: absolute;
+        bottom: 20px;
+        opacity: .5;
+        background-color: #F5EDED;
+        transition: .4s ease-out;
+        overflow: auto;
+
+        h1{
+            margin: 0 0 0 10px;
+            font-size: 24px;
+        }
+        p{
+            margin: 0 0 0 20px;
+            font-size: 18px;
+        }
+    }
+
+    .cardItemDescriptionSecond{
+        width: 100%;
+        height: 20%;
+        position: absolute;
+        bottom: 20px;
+        opacity: .99;
+        background-color: #F5EDED;
+        transition: .5s ease-out;
+        overflow: auto;
+
+        h1{
+            margin: 0 0 0 10px;
+            font-size: 26px;
+        }
+
+        span{
+            margin: 0 0 0 10px;
+            font-size: 20px;
+            display: block;
+        }
+
+        .stock {
+            margin: 0 auto;
+            padding: 5px;
+            background: linear-gradient(90deg, rgba(0,165,113,1) 0%, rgba(245,237,237,1) 100%);
+            color: #F5EDED;
+            font-weight: 900;
+            width: 95%;
+            padding: 5px 25px;
+        }
+        .unavailable {
+            margin: 0 auto;
+            padding: 5px;
+            background: linear-gradient(90deg, rgba(209,0,54,1) 0%, rgba(245,237,237,1) 100%);
+            color: #F5EDED;
+            font-weight: 900;
+            width: 95%;
+            padding: 5px 25px;
+        }
+    }
+
+    &:hover > .cardItemDescription{
+        opacity: 9;
+    }
+
+    &:hover > .cardItemDescriptionSecond{
+        opacity: 0;
+    }
+    &:hover > .cardItemImageHover{
+        opacity: .8;
+        transform: scale(1.1) rotateZ(3deg);
+    }
+    &:hover > .lockCard{
+        transform: scale(1.1) rotateZ(3deg);
+    }
+
+    &:hover > .cardReadDescription{
+        opacity: .9;
+
+    }
+    
+}
+.lockCard{
+    opacity: .3;
+}
+.lockLogIn{
+    font-size: 18px;
+    // background-color: #FFB835;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+    a{
+        color: #0F0E0E;
+        background-color: #FFB835;
+        padding: 2px;
+    }
+}

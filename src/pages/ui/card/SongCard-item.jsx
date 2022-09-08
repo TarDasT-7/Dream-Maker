@@ -6,10 +6,8 @@ import { useSelector } from "react-redux";
 
 import classes from "./SongCard-item.module.scss";
 
-
-
 const SongCardItem = (props) => {
-  const artistHref = '/music-page/artists/';
+  const artistHref = "/music-page/artists/";
   const playIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -42,45 +40,36 @@ const SongCardItem = (props) => {
   const musicPlayerController = () => {
     dispatch(MusicPlayerActions.playOrPauseToggle(props.id));
   };
-  
+
   const findItem = props.id === undefined ? false : true;
-  const image = props.id === undefined ?
-  process.env.PUBLIC_URL + `/images/errors/404.jpg` :
-  props.image;
-
-
+  const img =
+    props.id === undefined
+      ? process.env.PUBLIC_URL + `/images/errors/404.jpg`
+      : process.env.PUBLIC_URL + `/images/${props.image}`;
 
   return (
-    
     <div className={classes.cardItem}>
-
-      {!findItem &&
+      {!findItem && (
         <Fragment>
-
           <div
             className={`${classes.cardItemImage}`}
-            style={{ backgroundImage: `url(${image})` }}
-
+            style={{ backgroundImage: `url(${img})` }}
           ></div>
 
           <div className={classes.cardItemDescription}>
-          
-          <h1>
-            No artist with this name was found...
-          </h1>
-
+            <h1>No artist with this name was found...</h1>
           </div>
         </Fragment>
-      }
+      )}
 
-      {findItem && 
-        <Fragment >
+      {findItem && (
+        <Fragment>
           <div
             className={`${classes.cardItemImage} ${
               props.lock ? classes.lockCard : classes.cardItemImageHover
             }`}
-            style={{ backgroundImage: `url(${props.image})` }}
-            ></div>
+            style={{ backgroundImage: `url(${img})` }}
+          ></div>
           <div className={`${classes.cardItemPlay}`}>
             <span onClick={musicPlayerController}>
               {musicId === props.id && playingMusic ? pauseIcon : playIcon}
@@ -98,20 +87,23 @@ const SongCardItem = (props) => {
             </h1>
             {props.artists.map((artist, index) =>
               artist.isArtist ? (
-                  <span key={index}>
+                <span key={index}>
+                  {" "}
+                  <Link
+                    to={artistHref + artist.id}
+                    style={{ color: "#0F0E0E" }}
+                  >
                     {" "}
-                    <Link to={artistHref + artist.id} style={{ color: "#0F0E0E" }}>
-                      {" "}
-                      @{artist.name}{" "}
-                    </Link>{" "}
-                  </span>
+                    @{artist.name}{" "}
+                  </Link>{" "}
+                </span>
               ) : (
                 <span key={index}>#{artist.name}</span>
-                )
-              )}
+              )
+            )}
           </div>
         </Fragment>
-      }
+      )}
     </div>
   );
 };

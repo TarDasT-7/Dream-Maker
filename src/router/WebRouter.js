@@ -3,6 +3,7 @@ import {  Routes, Route } from "react-router-dom";
 
 import HomePage from "../pages/home/HomePage";
 import ClouthPage from "../pages/clouth/ClouthPage";
+import Product from "../pages/clouth/products/Product";
 import MusicPage from "../pages/music/MusicPage";
 import StudioPage from "../pages/studio/StudioPage";
 import TattoPage from "../pages/tatto/TattoPage";
@@ -35,6 +36,8 @@ const WebRouter = () =>{
 
 
                 <Route path="clouth-page" element={<ClouthPage />} />
+                <Route path="clouth-page/:productTitle" element={<Product />} />
+
                 <Route path="studio-page" element={<StudioPage />} />
                 <Route path="tatto-page" element={<TattoPage />} />
                 <Route path="/login-page" element={<TattoPage />} />

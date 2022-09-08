@@ -40,6 +40,8 @@ const Artist = (props) => {
         onFiltering={filteringHanler}
         prevFilter={filterParamets}
         counter={newArtistsItems.length}
+        placeholder="Artist Name..."
+        WhatShouldILookFor="ArtistsPlease"
       />
       {newArtistsItems.length > 0 &&
         newArtistsItems.map((item) => {
