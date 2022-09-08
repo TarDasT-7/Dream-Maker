@@ -25,7 +25,7 @@ const Song = (props) => {
     if (input.length > 0) {
       trackSorteed.map((sortTrack) => {
         return sortTrack.artists.filter((artist) => {
-          if (artist.name.toLowerCase().includes(input)) {
+          if (artist.name.toLowerCase().includes(input.toLowerCase())) {
             if (
               !filterArray.find((filterItem) => filterItem.id === sortTrack.id)
             ) {
@@ -41,7 +41,7 @@ const Song = (props) => {
   };
   return (
     <>
-      <FilterSong onFiltering={filteringHanler} prevFilter={filterParamets} />
+      <FilterSong onFiltering={filteringHanler} prevFilter={filterParamets} counter={newSongsItems.length}/>
       {newSongsItems.map((item) => {
         return (
           <div key={item.id}  className={classes.songsPageBox}>

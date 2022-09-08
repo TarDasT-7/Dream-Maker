@@ -4,11 +4,13 @@ import classes from './FilterSong.module.scss';
 
 const FilterSong = (props) => {
     const [openSearchBox, setOpenSearchBox] = useState(false);
-    const prevFiltering = props.prevFilter;
 
+    const prevFiltering = props.prevFilter;
 
     const [artistName, setArtistName] = useState(prevFiltering.search);
     const [sortStatus, setSortStatus] = useState(prevFiltering.sort);
+    
+    const itemFound = props.counter;
     
     const searchChangeHandler = (event) => {
         setArtistName(event.target.value);
@@ -18,6 +20,11 @@ const FilterSong = (props) => {
         setSortStatus(event.target.value);
     };
     
+    const clearHandler = () => {
+        setArtistName('');
+        setSortStatus('asc');
+    };
+    
     useEffect(()=>{
         props.onFiltering(sortStatus, artistName);
     }, [sortStatus, artistName])
@@ -25,6 +32,7 @@ const FilterSong = (props) => {
     const showHandler = () => {
         setOpenSearchBox(!openSearchBox);
     };
+
     
 
 
@@ -39,9 +47,19 @@ const FilterSong = (props) => {
             {openSearchBox && 
                 <div className={classes.filternig}>
 
-                    <div className={classes.closedSearchBox} onClick={showHandler}>
-                        Close
+                    <div className={classes.searchBoxHeader}>
+                        <div className={classes.closedSearchBox} onClick={showHandler}>
+                            Close
+                        </div>
+                        <div className={classes.clearSearchBox} onClick={clearHandler}>
+                            clear
+                        </div>
+                        <div className={classes.findItems} >
+                            items : {itemFound}
+                        </div>
+
                     </div>
+                    
                     
                     <div className={classes.searchbox}>
                         <input  type="text" placeholder='Artist Name...' onChange={searchChangeHandler} value={artistName} name="searching" />

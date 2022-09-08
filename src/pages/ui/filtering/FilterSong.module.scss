@@ -70,18 +70,66 @@
 
      }
 
-    .closedSearchBox{
-        background-color: #d10036;
-        color: #F5EDED;
-        position: relative;
-        bottom: 15px;
-        font-size: 26px;
-        margin-bottom: -14px;
-        border-radius: 5px;
-        transition: .4s ease-out;
-        
+    .searchBoxHeader{
+
+        width: 100%;
+        display: inline-flex;
+        direction: rtl;
+
+        .closedSearchBox{
+            cursor: pointer;
+            width: 33.333333333%;
+            background-color: #d10036;
+            color: #F5EDED;
+            position: relative;
+            bottom: 15px;
+            font-size: 26px;
+            margin-bottom: -14px;
+            border-radius: 5px;
+            transition: .4s ease-out;
+            padding: 4px 0;
+
             &:hover{
                 background-color: #9c0000;
             }
         }
+    
+        .clearSearchBox{
+            cursor: pointer;
+            width: 33.333333333%;
+            background-color: #F5EDED;
+            color: #0F0E0E;
+            position: relative;
+            bottom: 15px;
+            font-size: 26px;
+            margin-bottom: -14px;
+            border-radius: 5px;
+            transition: .4s ease-out;
+            padding: 4px 0;
+
+            &:hover{
+                background-color: #bab1b1;
+    
+            }
+    
+        }
+        .findItems{
+            width: 33.333333333%;
+            background-color: #00a571;
+            color: #F5EDED;
+            position: relative;
+            bottom: 15px;
+            font-size: 26px;
+            margin-bottom: -14px;
+            border-radius: 5px;
+            transition: .4s ease-out;
+            padding: 4px 0;
+
+            &:hover{
+                background-color: #008058;
+            }
+    
+        }
+
     }
+}
