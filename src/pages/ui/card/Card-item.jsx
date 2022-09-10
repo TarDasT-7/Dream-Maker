@@ -13,6 +13,10 @@ const CardItem = (props) => {
       ? process.env.PUBLIC_URL + `/images/errors/404.jpg`
       : process.env.PUBLIC_URL + `/images/${props.image}`;
 
+  // const img ='https://i.pinimg.com/736x/b1/03/e5/b103e5fa9eaf4a0eaba2c19a796d7b62.jpg';
+
+
+
   const newHref = !parentComponent ? props.href : "" + props.id;
 
   return (

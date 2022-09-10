@@ -33,8 +33,8 @@ const Navigation = () => {
 
           </li>
           <li>
-            <NavLink to="/tatto-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
-                Tatto
+            <NavLink to="/tattoo-page" className={(navData) => (navData.isActive ? "active-link" : "")}>
+                Tattoo
             </NavLink>
 
           </li>

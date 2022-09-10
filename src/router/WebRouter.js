@@ -7,6 +7,10 @@ import Product from "../pages/clouth/products/Product";
 import MusicPage from "../pages/music/MusicPage";
 import StudioPage from "../pages/studio/StudioPage";
 import TattoPage from "../pages/tatto/TattoPage";
+import TattooArtist from "../pages/tatto/artist/TattooArtist";
+import TattooStudio from "../pages/tatto/studio/TattooStudio";
+import TattooIdea from "../pages/tatto/idea/TattooIdea";
+import TattooArtistShow from "../pages/tatto/artist/TattooArtistShow";
 
 import Song from "../pages/music/song/Song";
 import Artist from "../pages/music/artist/Artist";
@@ -39,7 +43,13 @@ const WebRouter = () =>{
                 <Route path="clouth-page/:productTitle" element={<Product />} />
 
                 <Route path="studio-page" element={<StudioPage />} />
-                <Route path="tatto-page" element={<TattoPage />} />
+                <Route path="tattoo-page" element={<TattoPage />} />
+                <Route path="tattoo-page/artists" element={<TattooArtist />} />
+                <Route path="tattoo-page/artists/:artistId" element={<TattooArtistShow />} />
+                <Route path="tattoo-page/studios" element={<TattooStudio />} />
+                <Route path="tattoo-page/ideas" element={<TattooIdea />} />
+
+
                 <Route path="/login-page" element={<TattoPage />} />
             </Routes>
 

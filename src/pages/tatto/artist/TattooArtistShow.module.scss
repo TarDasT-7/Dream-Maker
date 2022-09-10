@@ -1,0 +1,69 @@
+.backWallpaper{
+    width: 100%;
+    height: 650px;
+    background: rgb(245,237,237);
+    background: linear-gradient(90deg, rgba(245,237,237,1) 0%, rgba(213,206,206,1) 27%, rgba(136,136,136,1) 52%, rgba(79,79,79,1) 75%, rgba(15,14,14,1) 93%, rgba(0,0,0,1) 100%);    position: absolute;
+    top: 100px;
+    opacity: .7;
+}
+
+.wallpaper{
+    margin: 20px 0 0 0;
+    width: 100%;
+    height: 650px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about{
+    width: 100%;
+    position: absolute;
+    top: 125px;
+    left: 0;
+    text-align: center;
+
+    .aboutTitle {
+        margin: 0 auto;
+        background-color: #0f0e0ed2;
+        color: #F5EDED;
+        max-width: 50%;
+        padding: 5px 10px;
+        font-family: mySecondFont;
+        font-size: 22px;
+        border-radius: 10px;
+    }
+    .aboutText {
+        margin: 20px auto 0 ;
+        background-color: #0f0e0ed2;
+        color: #F5EDED;
+        width: 90%;
+        max-height: 450px;
+        overflow: hidden;
+        padding: 10px ;
+        font-family: myFourthFont;
+        font-size: 22px;
+        border-radius: 10px;
+        
+        p{
+            margin: 20px 0;
+        }
+    }
+    
+
+}
+
+.tracks{
+    margin: 50px 0;
+    h1.lable{
+        margin: 0 0 0 20px;
+        font-size: 32px;
+        color: #F5EDED;
+    }
+
+    .songsPageBox{
+        width: 33.333333333%;
+        display: inline-block;
+        margin-bottom: 30px;
+    }   
+}

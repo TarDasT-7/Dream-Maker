@@ -7,7 +7,10 @@ import { useSelector } from "react-redux";
 import classes from "./SongCard-item.module.scss";
 
 const SongCardItem = (props) => {
-  const artistHref = "/music-page/artists/";
+  const parentComponent =
+  props.parentComponent === undefined ? false : props.parentComponent;
+
+  const artistHref = parentComponent === 'tattooIdea' ? "/tattoo-page/artists/" : "/music-page/artists/";
   const playIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +45,9 @@ const SongCardItem = (props) => {
   };
 
   const findItem = props.id === undefined ? false : true;
+
+
+
   const img =
     props.id === undefined
       ? process.env.PUBLIC_URL + `/images/errors/404.jpg`
@@ -70,11 +76,13 @@ const SongCardItem = (props) => {
             }`}
             style={{ backgroundImage: `url(${img})` }}
           ></div>
-          <div className={`${classes.cardItemPlay}`}>
-            <span onClick={musicPlayerController}>
-              {musicId === props.id && playingMusic ? pauseIcon : playIcon}
-            </span>
-          </div>
+          {!parentComponent && 
+            <div className={`${classes.cardItemPlay}`}>
+              <span onClick={musicPlayerController}>
+                {musicId === props.id && playingMusic ? pauseIcon : playIcon}
+              </span>
+            </div>
+          }
 
           <div className={classes.cardItemDescription}>
             <h1>
@@ -85,21 +93,30 @@ const SongCardItem = (props) => {
                 </span>
               )}
             </h1>
-            {props.artists.map((artist, index) =>
-              artist.isArtist ? (
-                <span key={index}>
-                  {" "}
-                  <Link
-                    to={artistHref + artist.id}
-                    style={{ color: "#0F0E0E" }}
-                  >
+            {!parentComponent &&
+              props.artists.map((artist, index) =>
+                artist.isArtist ? (
+                  <span key={index}>
                     {" "}
-                    @{artist.name}{" "}
-                  </Link>{" "}
-                </span>
-              ) : (
-                <span key={index}>#{artist.name}</span>
-              )
+                    <Link
+                      to={artistHref + artist.id}
+                      style={{ color: "#0F0E0E" }}
+                    >
+                      {" "}
+                      @{artist.name}{" "}
+                    </Link>{" "}
+                  </span>
+                ) : (
+                  <span key={index}>#{artist.name}</span>
+                )
+              )}
+
+            {parentComponent && parentComponent === "tattooIdea" && (
+              <span key={props.artist.id}>
+                <Link to={artistHref + props.artist.id} style={{ color: "#0F0E0E" }}>
+                  @{props.artist.name}
+                </Link>
+              </span>
             )}
           </div>
         </Fragment>
