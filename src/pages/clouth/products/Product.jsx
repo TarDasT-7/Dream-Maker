@@ -19,8 +19,6 @@ const Product = () => {
   const clouth = clouthData.find((clouth) => clouth.title === kind);
   const products = clouth.products;
   const [newProductItems, setProductItems] = useState(products);
-  const filterArray = [];
-  const lastFiltering = [];
 
   const filteringHanler = (selection, input, gender) => {
     setFilterParametrs({ sort: selection, search: input, gender: gender });
@@ -42,6 +40,8 @@ const Product = () => {
       filterd = data;
       data =[];
     }
+    console.log(filterd);
+
 
     if (gender !== "both") {
       filterd.filter((product) => {
@@ -52,9 +52,6 @@ const Product = () => {
       filterd = data;
     }
     setProductItems(filterd);
-
-    console.log(newProductItems);
-
 
   };
 
@@ -81,13 +78,13 @@ const Product = () => {
         );
       })}
 
-      {/* {newSongsItems.length == 0 && (
+      {newProductItems.length == 0 && (
         <div className={classes.songsPageBox}>
-          <SongCard>
-            <SongCardItem />
-          </SongCard>
+          <Card>
+            <ClouthCardItem />
+          </Card>
         </div>
-      )} */}
+      )}
     </>
   );
 };

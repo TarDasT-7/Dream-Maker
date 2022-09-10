@@ -49,7 +49,7 @@ export const clouthData = [
         sale: 0,
         price: 50.25,
         gender: "man",
-        productCode: "20222023" + 85,
+        productCode: "20222023" + 81,
       },
       {
         id: 2,
@@ -92,7 +92,7 @@ export const clouthData = [
         sale: 25,
         price: 57.5,
         gender: "woman",
-        productCode: "20222023" + 86,
+        productCode: "20222023" + 82,
       },
       {
         id: 3,
@@ -123,7 +123,7 @@ export const clouthData = [
         sale: 50,
         price: 250.0,
         gender: "man",
-        productCode: "20222023" + 87,
+        productCode: "20222023" + 83,
       },
       {
         id: 4,
@@ -166,7 +166,7 @@ export const clouthData = [
         sale: 10,
         price: 140.25,
         gender: "woman",
-        productCode: "20222023" + 88,
+        productCode: "20222023" + 84,
       },
     ],
   },
@@ -219,6 +219,7 @@ export const clouthData = [
         sale: 0,
         price: 50.25,
         gender: "woman",
+        productCode: "20222023" + 85,
       },
       {
         id: 2,
@@ -261,6 +262,7 @@ export const clouthData = [
         sale: 25,
         price: 57.5,
         gender: "man",
+        productCode: "20222023" + 86,
       },
       {
         id: 3,
@@ -291,6 +293,7 @@ export const clouthData = [
         sale: 50,
         price: 250.0,
         gender: "man",
+        productCode: "20222023" + 87,
       },
     ],
   },
